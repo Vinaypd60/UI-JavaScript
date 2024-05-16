@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function ShowBikeImage(){
+                  document.querySelector("img").src="https://th.bing.com/th/id/R.9b824b9f9856e237fdb713b368553506?rik=2WlcIAht653yqg&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fwp1882106.jpg&ehk=4chGGRKY6RiGNfRbS5LxklSoVV4jSh22xFoRr433z6s%3d&risl=&pid=ImgRaw&r=0"
+            }
+            function ShowPeaceImage(){
+                 document.querySelector("img").src="https://i.pinimg.com/736x/a5/bd/67/a5bd6729625a4c11369dc79f8dea418b.jpg"
+            }
+            function ChangeH2style(){
+                document.querySelector("h2").style.color = "red";
+            }
+
+            function ChangeH2Yellow(){
+                document.querySelector("h2").style.color = "yellow";
+            }
+            function changeparastyle(){
+                document.querySelector("p").style.color = "red";
+            }
+            function Changestyle(){
+                document.querySelector("p").style.backgroundColor="skyblue";
+                document.querySelector("p").style.padding="30px";
+                document.querySelector("p").style.color="white";
+            }
+            function fnInput(){
+                console.log("working");
+               var inputcontent = Document.querySelector("input").value;
+               document.querySelector("h3").innerText = inputcontent.toUpperCase();
+            }
+            function changeInputStyle(){
+                document.querySelector("input").style.border = "2px solid blue";
+            }
+        </script>
+    </head>
+    <body onload="Changestyle()" style="height: 1500px" onscroll="changeparastyle()">
+        <div>
+            <h2>Click Event</h2>
+            <!-- <input type="text" placeholder="Name" onkeydown="fnInput()" /> -->
+            <input type="text" placeholder="Name" onfocus="changeInputStyle()" onblur="fnInput()" />
+            <h3></h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum repellendus esse ex non nobis accusamus, enim maiores nisi sint aperiam est dolorum consequuntur id officiis a quod quibusdam ut modi quasi asperiores reprehenderit beatae labore? Praesentium quas dignissimos ex nam dolorem nihil explicabo, laborum aliquid voluptatibus. Quia placeat recusandae vel aperiam, corrupti maxime nihil iure ut odit mollitia ipsa! Veniam voluptatibus architecto omnis, doloremque iste officiis sequi culpa impedit iure? Assumenda voluptatum voluptate at provident sint iusto aspernatur facilis, vero aliquid ab fuga ut recusandae saepe impedit a voluptas suscipit repudiandae quis nisi officiis magnam quasi! Explicabo nesciunt iste unde!</p>
+            <img src="https://i.pinimg.com/736x/a5/bd/67/a5bd6729625a4c11369dc79f8dea418b.jpg" 
+                 width="500" 
+                 height="300" 
+                 onmouseenter="ShowBikeImage()"
+                 onmouseleave="ShowPeaceImage()"
+            /><br /><br />
+            <br />
+            <input type="radio" onchange="ChangeH2style()"  name="style"/>Red <br /><br />
+            <input type="radio" onchange="ChangeH2Yellow()"  name="style"/>Yellow <br /><br />
+            <button onclick="ChangeH2style()">Click Me</button>
+        </div>
+    </body>
+</html>
