@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Remove attribute</title>
+        <style>
+               .Container{
+                width:"200px";
+                padding:30px ;
+                box-shadow:0 0 10px black ;
+                margin:100px auto;
+                text-align: center;
+
+               }
+               .h2{
+                color: red;
+               }
+        </style>
+        <script>
+            function fnremoveattribut(){
+                var inputDomElement = document.querySelector("input");
+                var h2DomElement = document.querySelector("h2");
+
+                inputDomElement.removeAttribute("placeholder");
+                inputDomElement.removeAttribute("h2");
+            }
+            function fnAddattribut(){
+                var inputDomElement = document.querySelector("#newusername");
+                var h2DomCollection = document.querySelectorAll("h2");
+                var h2DomElement = h2DomCollection[1];
+                inputDomElement.setAttribute("placeholder","EnterNewUsername"); 
+                h2DomElement.setAttribute("class",h2style);
+            }
+            function fnAddattribut(){
+                var inputDomElement = document.querySelector("update");
+               inputDomElement.setAttribute("type","password")
+            }
+        </script>
+    </head>
+    <body>
+
+        <div class="Container">
+            <div>
+                <h2 style="color:green">Update attribute</h2>
+                <input type="text" placeholder="Enter name" id="Update" />
+                <button onclick="fnupdateAttribute()">Update Attribute</button>
+            </div>
+        <div>
+        <h2 style="color:green">Remove attribute</h2>
+        <input type="text" placeholder="Enter name" />
+        <button onclick="fnremoveattribut()">Remove attribute</button>
+    </div>
+
+    <div>
+        <h2 style="color:green">Add attribute</h2>
+        <input type="text" placeholder="Enter name"  />
+        <button onclick="fnAddattribut()">Add attribute</button>
+    </div>
+</div>
+    </body>
+</html>

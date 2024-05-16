@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Remove attribute</title>
+        <style>
+               .Container{
+                width:"200px";
+                padding:30px ;
+                box-shadow:0 0 10px black ;
+                margin:100px auto;
+                text-align: center;
+
+               }
+               .h2style{
+                color:Red;
+               }
+
+        </style>
+        <script>
+           function  fnCreateElement(){
+           var pDomElement = document.createElement("p");
+
+           pDomElement.innerText = "New Para is created";
+
+           var divDomElement = document.querySelector("div");
+           divDomElement.appendChild(pDomElement);
+           }
+        </script>
+        
+    </head>
+    <body>
+
+        <div class="Container">
+            <div>
+                <h2 class="h2style">Create DOMElement</h2>
+                
+                <button ondblclick="fnCreateElement()">Create DOM</button>
+            </div>
+        
+</div>
+    </body>
+</html>
