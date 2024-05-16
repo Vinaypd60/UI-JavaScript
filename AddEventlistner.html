@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Event Listner Dynamically</title>
+        <script>
+            function getUserDetails(){
+                alert("getUserDetails");
+            }
+            function fnaddEvent(){
+                // alert("Button 1 Executed");
+                var btnDomelement = document.getElementById("B2");
+                btnDomelement.addEventListener("click",getUserDetails);
+                
+                btnDomelement.addEventListener("mouseenter", function(){
+                    btnDomelement.style.color = "red";
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <h2>AddEventListner</h2>
+        <button onclick="fnaddEvent()">With Event Listner</button>
+        <button id="B2">Without EventListner</button>
+    </body>
+</html>
