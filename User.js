@@ -1,7 +1,12 @@
-export var username = "Vinay";
+var userName = "Riya Reddy"; // Global Scope
+console.log(module);
 
-export var city = "Hyderabad";
-
-function printUserFullName(){
-    console.log(username, "sai");
+function newUser() {
+  //Global Scope
+  console.log("newUser is created");
 }
+
+module.exports = {
+  userName, // Module Scope
+  newUser,
+};
