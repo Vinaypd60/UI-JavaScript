@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            function getDomElement(){
+                //logic to access h2 p dom element
+                var h2DomElement = document.getElementById("Heading");
+                var pDomElement = document.getElementById("para");
+                var buttonDomElement =  document.getElementById("btn");
+
+                // Access the 
+                var h2content = h2DomElement.innerText;
+                console.log(h2content)
+
+                //printing all the key name of h2DomElement prop
+               // for (let key in h2DomElement){ // we can pass document also it will shows the prop
+            //    console.log(key);
+              //  }
+            }
+
+        </script>
+        <body>
+            <h2 id="heading">Welcome to DOM</h2>
+            <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci, iure! Aspernatur laborum consectetur quibusdam dolorum facilis dicta, asperiores autem magnam!</p>
+             <button onclick="getDomElement()">Get DOM Element</button>
+        </body>
+    </head>
+</html>
